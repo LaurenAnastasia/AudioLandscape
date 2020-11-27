@@ -150,8 +150,8 @@ function draw() {
   for (let y = 1; y < rows - 1; y ++) {
         beginShape(TRIANGLE_STRIP);
         for (let x = 1; x < cols - 1; x ++) {
-          let specMap = map(spectrum[x*y], 0, 255, 0, 10);
-          let specMapTwo = map(spectrum[x*(y+1)], 0, 255, 0, 10);
+          let specMap = map(spectrum[x*y], 0, 255, 0, 6);
+          let specMapTwo = map(spectrum[x*(y+1)], 0, 255, 0, 6);
           let zVal = specMap * terrain[x][y];
           let zValTwo = specMapTwo * terrain[x][y+1];
           vertex(x*scl, y*scl, zVal);
